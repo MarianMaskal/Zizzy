@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <!--<div class="input">
+        <input type="text" placeholder="search">
+    </div>-->
+    <div class="col col-1">
+      <div class="card">
+        <div class="card-small__photo">
+          <div class="img-wrap">
+            <img
+              class="card-small__photo-image"
+              src="./images/Dorian.jpg"
+              alt="Dorian Grey"
+            />
+          </div>
+        </div>
+        <div class="card-small__info">
+          <span class="card-small__info-name">Dorian Grey</span>
+          <span class="card-small__info-city">Prague ONE</span>
+          <div class="card-small__info-showMore"></div>
+        </div>
+        <div class="card-small__partners">
+          <span class="card-small__partners-text">6 partners</span>
+        </div>
+      </div>
+      <div class="card-hidden">
+        <div class="card-users">
+          <i class="fas fa-user-friends pink"></i>
+          <span class="card-users__number pink">22</span>
+          <i class="fas fa-user-friends purple"></i>
+          <span class="card-users__number purple">5</span>
+        </div>
+        <div class="card-big__info">
+          <div class="card-big__info-stats">
+            <div>
+              <span class="cyan">Portfolio balance</span>
+              <span class="white bold">1,550,450.50 $</span>
+            </div>
+            <div>
+              <span class="cyan">Portfolio deposits</span>
+              <span class="blue">1,500,000.00 $</span>
+            </div>
+            <div>
+              <span class="cyan">Portfolio evaluation</span>
+              <span class="green">+50,450.50 $</span>
+            </div>
+            <div>
+              <span class="cyan">Portfolio target</span>
+              <span class="red">3,000,000.00 $</span>
+            </div>
+          </div>
+          <div class="card-big__info-attr">
+            <div>
+              <span class="cyan">Team</span>
+              <span class="cyan2">Prague ONE</span>
+            </div>
+            <div>
+              <span class="cyan">Director</span>
+              <span class="cyan2">Bruce Wayne</span>
+            </div>
+            <div>
+              <span class="cyan">Senior partner</span>
+              <span class="cyan2">Bruce Wayne</span>
+            </div>
+            <div>
+              <span class="cyan">Created on</span>
+              <span class="cyan2">02.07.2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-2"></div>
+    <div class="col col-3"></div>
+    <div class="col col-4"></div>
+    <div class="col col-5"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #171b3a;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  justify-content: start;
+  align-items: flex-start;
+}
+.bold {
+  font-weight: bold;
+}
+.pink {
+  color: #ee2c7a;
+}
+.purple {
+  color: #7145d5;
+}
+.blue {
+  color: #3f9bc8;
+}
+.green {
+  color: #3d7c5c;
+}
+.red {
+  color: #922232;
+}
+.white {
+  color: #fff;
+}
+.cyan {
+  color: #6a6ca2;
+}
+.cyan2 {
+  color: #6f709e;
+}
+.col {
+  flex: 1 auto;
+  height: 100%;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+}
+.col:not(:last-child) {
+  border-right: 1.2px solid #00003f;
+  height: 500px;
+}
+.col-1::before {
+  content: "1";
+  padding: 10px;
+  color: rgba(192, 192, 192, 0.1);
+  font-size: 150px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.col-2::before {
+  content: "2";
+  padding: 10px;
+  color: rgba(192, 192, 192, 0.1);
+  font-size: 150px;
+  font-weight: bold;
+}
+.col-3::before {
+  content: "3";
+  padding: 10px;
+  color: rgba(192, 192, 192, 0.1);
+  font-size: 150px;
+  font-weight: bold;
+}
+.col-4::before {
+  content: "4";
+  padding: 10px;
+  color: rgba(192, 192, 192, 0.1);
+  font-size: 150px;
+  font-weight: bold;
+}
+.col-5::before {
+  content: "5";
+  padding: 10px;
+  color: rgba(192, 192, 192, 0.1);
+  font-size: 150px;
+  font-weight: bold;
+}
+.card {
+  display: flex;
+  background-color: #222146;
+  flex: 1 1 auto;
+  border-radius: 17px;
+  max-height: 100px;
+  margin: 0 5px 0 5px;
+  flex-direction: row;
+}
+.card-small {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.card-small__photo {
+  flex: 1 auto;
+  margin: 5;
+  display: flex;
+  padding: 20px 0 20px 20px;
+}
+.card-small__photo-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.img-wrap {
+  width: 60px;
+  height: 57px;
+  padding: 5px;
+  border: 3px solid #8f00ff;
+  border-radius: 50%;
+}
+.card-small__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  margin: 5;
+  padding: 20px 0 0 0;
+}
+.card-small__info-name {
+  flex: 1 auto;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-small__info-city {
+  font-size: 15px;
+  flex: 1 auto;
+  color: #48b8e7;
+}
+.card-small__info-showMore {
+  display: flex;
+  align-self: center;
+  justify-self: flex-end;
+  height: 3px;
+  width: 45px;
+  background-color: darkslateblue;
+  margin: 0 0 5px 0;
+  border-radius: 25%;
+}
+.card-small__partners {
+  display: flex;
+  align-self: flex-end;
+  color: #844ef9;
+  font-size: 15px;
+  padding: 15px;
+}
+.card-hidden {
+  display: flex;
+  background-color: #222146;
+  flex: 1 1 auto;
+  border-radius: 17px;
+  max-height: 250px;
+  margin: 0 5px 0 5px;
+  flex-direction: column;
+}
+.card-users {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 15px;
+}
+.card-users > i {
+  font-size: 18px;
+  margin: 0 8px 0 8px;
+}
+.card-users > span {
+  font-size: 18px;
+}
+
+.card-big__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-big__info-stats {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 15px;
+}
+.card-big__info-stats > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+}
+.card-big__info-attr {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 0;
+}
+.card-big__info-attr > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+}
