@@ -1,9 +1,14 @@
+$( document ).ready(function() {
+    if (document.documentElement && document.documentElement.clientWidth) {
+        if(document.documentElement.clientWidth < 1000) {
+            alert('STIAHNITE SI NAŠU APPku');
+        }
+        return console.log(document.documentElement.clientWidth);
+
+      }});
+
+
 $('.card-small__info-showMore').click(function() {
-    // $( "#card-hidden" ).toggleClass( "hidden" );
-    // $( ".card" ).toggleClass( "max-height" );
-    // $('#showMore').hide();
-    // $('#showLess').show();
-    console.log($(this));
     $(this).parents().siblings('.card-hidden').toggleClass( "hidden" );
     $(this).parents('.card').toggleClass( "max-height" );
     $(this).hide();
@@ -11,8 +16,6 @@ $('.card-small__info-showMore').click(function() {
 });
 
 $('.card-big__showMore').click(function() {
-    console.log($(this));
-
     $(this).parents('.card-hidden').toggleClass( "hidden" );
     $(this).parents('.card').toggleClass( "max-height" );
     $(this).hide();
